@@ -1,0 +1,48 @@
+html, body {
+    touch-action: pan-x;
+    overscroll-behavior: none;
+    margin: 0;
+    scrollbar-width: none;
+}
+
+#projectlist {
+    scrollbar-width: none;
+    white-space: nowrap;
+}
+.project {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-top: 20vh;
+    width: 40vw;
+    height: 50vh;
+    background-color: dodgerblue;
+}
+
+#amountscrolled {
+    position: fixed;
+    bottom: 5vh;
+    margin-left: 5vw;
+    width: 90vw;
+    height: 5vh;
+
+    background-color: cyan;
+    border: none;
+}
+#amountscrolled::-webkit-progress-bar {
+    background-color: cyan;
+}
+#amountscrolled::-webkit-progress-value {
+    background-color: blue;
+}
+#amountscrolled::-moz-progress-bar {
+    background-color: blue;
+}
+
+@media (max-width: 767px) {
+    #projectlist {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+}
